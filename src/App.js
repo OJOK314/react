@@ -127,9 +127,7 @@ const hideLayout = location.pathname.startsWith('/') &&
 
             <Route path='/contact'
              element={
-              <PrivateRoute>
                 <Contact />
-              </PrivateRoute>
             } />
 
             {/* Add other private or public routes here */}

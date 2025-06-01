@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
-const dummyUser = {
-  email: 'admin@example.com',
-  password: '1234',
+
+
+const dummuser={
+email:'ojokalfred@gmail.com',
+password:'1234',
 };
 
 function Login() {
@@ -17,35 +19,36 @@ function Login() {
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData((prevData) => ({ ...prevData, [name]: value, }));
+
+  
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    if (
-      formData.email === dummyUser.email &&
-      formData.password === dummyUser.password
-    ) 
-    
-    {
-      localStorage.setItem('isAuthenticated', 'true');
-      navigate('/home');
+ 
 
-       setFormData({
-      email: '',
-      password: '',
-    });
+  // declaration
+  const handleSubmit = (e) => {e.preventDefault();
 
-    } else {
-      alert('invalid credentials');
-    }
+     if(
+    formData.email === dummuser.email &&
+    formData.password === dummuser.password
+  )
+  
+  {
+ setFormData({email:'', password:'',});
+ localStorage.setItem('isAuthenticated', 'true');
 
-   
+ navigate('/home')
+  } 
+  
+  else{
+  alert('invalide credentail');
   };
+
+
+}
+  
 
   return (
     <div className='login-container'>
@@ -81,10 +84,12 @@ function Login() {
         </div>
 
         <p className='heading'>
-          Don't have an account?{' '}
+          Don't have an account{''}
           <a href='./Signup' className='head'>SignUp</a>
         </p>
       </form>
+
+      
     </div>
   );
 }

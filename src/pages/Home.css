@@ -1,0 +1,66 @@
+table {
+    border: 2px solid forestgreen;
+    margin-top: 10px;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+td {
+    text-align: center;
+    border: 2px solid forestgreen;
+}
+.input{
+  background-color: blue;
+  color: white;
+  width: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 20px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination li {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.pagination li:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination li.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination li.break-me {
+  cursor: default;
+  border: none;
+  background: transparent;
+}
