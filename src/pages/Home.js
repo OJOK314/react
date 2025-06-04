@@ -3,13 +3,13 @@ import axios from "axios";
 import "./Home.css";
 import ReactPaginate from "react-paginate";
 
-const Home = () => {
+  const   Home = () => {
   const [accounts, setAccounts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [itemOffset, setItemOffset] = useState(0);
 
-  const itemsPerPage = 10;
+  const itemsPerPage = 100;
 
   const fetchAccounts = async () => {
     setLoading(true);
@@ -20,7 +20,8 @@ const Home = () => {
       setAccounts(response.data);
     } catch (error) {
       console.error("Error fetching accounts:", error);
-    } finally {
+    } 
+    finally {
       setLoading(false);
     }
   };
@@ -52,7 +53,6 @@ const Home = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="input"
       />
-
       {loading ? (
         <div>
           <p>Loading...</p>

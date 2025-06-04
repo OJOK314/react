@@ -34,13 +34,13 @@ function Login() {
     formData.email === dummuser.email &&
     formData.password === dummuser.password
   )
-  
   {
+  
  setFormData({email:'', password:'',});
  localStorage.setItem('isAuthenticated', 'true');
 
  navigate('/home')
-  } 
+  }
   
   else{
   alert('invalide credentail');
